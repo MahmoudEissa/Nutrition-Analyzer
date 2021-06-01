@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NutritionResultsViewController" customModule="Nutrition_Analyzer" customModuleProvider="target">
+            <connections>
+                <outlet property="caloriesLabel" destination="oME-YU-pbn" id="MoV-Ki-RBn"/>
+                <outlet property="tableView" destination="Pk8-uS-lmf" id="pXs-Wc-W5L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0n-Sc-g2m">
+                    <rect key="frame" x="16" y="60" width="382" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-HU-qhV">
+                            <rect key="frame" x="17" y="36" width="84.5" height="26.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="702" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oME-YU-pbn">
+                            <rect key="frame" x="328" y="37" width="38" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="oME-YU-pbn" firstAttribute="centerY" secondItem="C0n-Sc-g2m" secondAttribute="centerY" id="dGe-zr-GP4"/>
+                        <constraint firstAttribute="trailing" secondItem="oME-YU-pbn" secondAttribute="trailing" constant="16" id="uQP-r9-a0G"/>
+                        <constraint firstAttribute="height" constant="100" id="xwa-qe-w77"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadow">
+                            <color key="value" systemColor="systemGray5Color"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pk8-uS-lmf">
+                    <rect key="frame" x="0.0" y="219" width="414" height="661"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IQB-N0-rdf"/>
+                        <outlet property="delegate" destination="-1" id="2hd-Cy-tCu"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Values" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmI-cR-ebX">
+                    <rect key="frame" x="283" y="176" width="115" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Pk8-uS-lmf" firstAttribute="top" secondItem="SmI-cR-ebX" secondAttribute="bottom" constant="16" id="0NK-v8-b4s"/>
+                <constraint firstAttribute="bottom" secondItem="Pk8-uS-lmf" secondAttribute="bottom" constant="16" id="7e5-0W-XGo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pk8-uS-lmf" secondAttribute="trailing" id="D2H-Oa-cgm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C0n-Sc-g2m" secondAttribute="trailing" constant="16" id="WHx-Kp-bo4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SmI-cR-ebX" secondAttribute="trailing" constant="16" id="YuW-uz-jJP"/>
+                <constraint firstItem="C0n-Sc-g2m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="ZgV-L5-dNU"/>
+                <constraint firstItem="Pk8-uS-lmf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iYO-KS-ebo"/>
+                <constraint firstItem="C0n-Sc-g2m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="khF-df-NBj"/>
+                <constraint firstItem="SmI-cR-ebX" firstAttribute="top" secondItem="C0n-Sc-g2m" secondAttribute="bottom" constant="16" id="vLd-q8-Phf"/>
+            </constraints>
+            <point key="canvasLocation" x="100.00000000000001" y="65.625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

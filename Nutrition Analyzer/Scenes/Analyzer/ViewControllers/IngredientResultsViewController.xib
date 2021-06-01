@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IngredientResultsViewController" customModule="Nutrition_Analyzer" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="NzT-rb-mPG" id="Lle-22-BbD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NzT-rb-mPG">
+                    <rect key="frame" x="0.0" y="60" width="414" height="724"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hSF-fB-67J"/>
+                        <outlet property="delegate" destination="-1" id="Ypb-sq-s2k"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvm-AU-vVb">
+                    <rect key="frame" x="107" y="800" width="200" height="46"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="MGX-FA-fNP"/>
+                        <constraint firstAttribute="width" constant="200" id="S7l-9Z-qDi"/>
+                    </constraints>
+                    <color key="tintColor" name="AccentColor"/>
+                    <state key="normal" title="Total Nutrition">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="totalNutritionClicked:" destination="-1" eventType="touchUpInside" id="EZf-hJ-JZV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NzT-rb-mPG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="AVV-lK-JMx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cvm-AU-vVb" secondAttribute="bottom" constant="16" id="FOI-de-Sd9"/>
+                <constraint firstItem="cvm-AU-vVb" firstAttribute="top" secondItem="NzT-rb-mPG" secondAttribute="bottom" constant="16" id="Smi-kw-l5L"/>
+                <constraint firstItem="cvm-AU-vVb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TQa-D6-lHP"/>
+                <constraint firstItem="NzT-rb-mPG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VM9-m3-c3g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NzT-rb-mPG" secondAttribute="trailing" id="mMa-U1-L7J"/>
+            </constraints>
+            <point key="canvasLocation" x="101" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

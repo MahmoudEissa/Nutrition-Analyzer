@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IngredientsViewController" customModule="Nutrition_Analyzer" customModuleProvider="target">
+            <connections>
+                <outlet property="analizeButton" destination="5iD-AH-AP0" id="H3Z-xL-Tkl"/>
+                <outlet property="ingredientsTextView" destination="qtE-eH-Z8h" id="apW-QJ-GKU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-pW-hlA">
+                    <rect key="frame" x="32" y="159" width="350" height="609"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qtE-eH-Z8h" customClass="TextView" customModule="Nutrition_Analyzer" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="334" height="593"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="input-textView"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Write here"/>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qtE-eH-Z8h" firstAttribute="leading" secondItem="Scj-pW-hlA" secondAttribute="leading" constant="8" id="I07-1i-1Z7"/>
+                        <constraint firstItem="qtE-eH-Z8h" firstAttribute="top" secondItem="Scj-pW-hlA" secondAttribute="top" constant="8" id="aud-Bx-g80"/>
+                        <constraint firstAttribute="bottom" secondItem="qtE-eH-Z8h" secondAttribute="bottom" constant="8" id="sGu-yy-vbb"/>
+                        <constraint firstAttribute="trailing" secondItem="qtE-eH-Z8h" secondAttribute="trailing" constant="8" id="v2Y-cG-Hwe"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadow">
+                            <color key="value" systemColor="systemGray5Color"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iD-AH-AP0">
+                    <rect key="frame" x="107" y="800" width="200" height="46"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <accessibility key="accessibilityConfiguration" identifier="analyize-button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="DAt-Ru-J1B"/>
+                        <constraint firstAttribute="width" constant="200" id="Dyq-8W-M8y"/>
+                    </constraints>
+                    <color key="tintColor" name="AccentColor"/>
+                    <state key="normal" title="Analize">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fX-At-ag9">
+                    <rect key="frame" x="16" y="60" width="382" height="67"/>
+                    <string key="text">Enter an ingredient list list for what you are cooking, like
+1 cup rice
+10 oz chickpeas etc.
+Enter each ingredient on a new line.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Scj-pW-hlA" firstAttribute="top" secondItem="3fX-At-ag9" secondAttribute="bottom" constant="32" id="2gb-qC-X0Y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Scj-pW-hlA" secondAttribute="trailing" constant="32" id="8PE-gd-Vdq"/>
+                <constraint firstItem="5iD-AH-AP0" firstAttribute="top" secondItem="Scj-pW-hlA" secondAttribute="bottom" constant="32" id="AfL-8Y-Eez"/>
+                <constraint firstItem="Scj-pW-hlA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="C75-IR-TJv"/>
+                <constraint firstItem="5iD-AH-AP0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E9t-Ay-zo4"/>
+                <constraint firstItem="3fX-At-ag9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HDz-uj-IQ0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3fX-At-ag9" secondAttribute="trailing" constant="16" id="Vff-58-5oH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5iD-AH-AP0" secondAttribute="bottom" constant="16" id="alM-T2-XNl"/>
+                <constraint firstItem="3fX-At-ag9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="hc1-MV-HCD"/>
+            </constraints>
+            <point key="canvasLocation" x="100.00000000000001" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
