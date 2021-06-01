@@ -24,6 +24,9 @@ class NetworkManager: ESNetworkManager {
         switch response.response?.statusCode {
         case 200:
             return .success(JSON(response.value))
+            
+        case 401:
+            return .failure(NSError.init(error: "Unauthorized app_id or key_id", code: 401))
                         
         case 555:
             return .failure(NSError.init(error: "Recipe with insufficient quality to process correctly", code: -1))
