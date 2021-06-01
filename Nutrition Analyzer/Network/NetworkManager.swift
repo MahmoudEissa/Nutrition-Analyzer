@@ -25,6 +25,9 @@ class NetworkManager: ESNetworkManager {
         case 200:
             return .success(JSON(response.value))
                         
+        case 555:
+            return .failure(NSError.init(error: "Recipe with insufficient quality to process correctly", code: -1))
+
         default:
             return .failure(NSError.init(error: "unexpected status code", code: -1))
         }
